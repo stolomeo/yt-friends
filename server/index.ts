@@ -17,6 +17,6 @@ io.on("connection", (socket) => {
   console.log(`User conntected: ${socket.id}`);
 });
 
-server.listen(3000, () => {
+server.listen(3001, () => {
   console.log("Listening...");
 });
