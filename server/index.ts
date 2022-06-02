@@ -13,6 +13,10 @@ const io = new Server(server, {
   },
 });
 
+io.on("connection", (socket) => {
+  console.log(`User conntected: ${socket.id}`);
+});
+
 server.listen(3000, () => {
   console.log("Listening...");
 });
