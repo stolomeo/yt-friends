@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { io, Socket } from "socket.io-client";
+import Home from "./components/Home/Home";
+import GlobalStyle from "./GlobalStyle";
 // import {
 //   ClientToServerEvents,
 //   ServerToClientEvents,
@@ -23,6 +25,8 @@ function App() {
 
   return (
     <>
+      <GlobalStyle />
+      <Home />
       <input
         placeholder="Message..."
         onChange={(e) => setMessage(e.target.value)}
