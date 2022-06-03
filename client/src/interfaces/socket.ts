@@ -16,3 +16,6 @@ export interface SocketData {
   name: string;
   age: number;
 }
+// export type ServerInitiatedEventsMap = EventsMap & {
+//   ping: (callback: (value: string) => void) => void;
+// };

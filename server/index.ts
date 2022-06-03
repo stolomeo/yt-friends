@@ -13,8 +13,11 @@ const io = new Server(server, {
   },
 });
 
-io.on("connection", (socket) => {
+io.on("connection", (socket: any) => {
   console.log(`User conntected: ${socket.id}`);
+  socket.on("send_message", (data: any) => {
+    socket.broadcast.emit("receieve_message", data);
+  });
 });
 
 server.listen(3001, () => {
